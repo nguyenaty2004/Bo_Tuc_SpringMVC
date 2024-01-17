@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> Tính 2 Số </h1>
+<form th:action ="@{/calculate/sum}" method="get">
+    <input type="number" name="number1"  placeholder="number1...">
+     <select name="option">
+    <option value="+">+</option>
+    <option value="-">-</option>
+    <option value="*">*</option>
+    <option value="/">/</option>
+    </select>
+    <input type="number" name="number2" placeholder="number2...">
+    <button type="submit">Calculator</button>
+</form>
+<p th:text="${result}"></p>
+</body>
+</html>

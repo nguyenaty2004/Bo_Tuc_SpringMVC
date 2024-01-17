@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org"lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h1>COn chó Đức </h1>
+<form th:action="@{/SumFourNumber/result}" method="get">
+  <input type="number" name="number1" placeholder="Number1">
+  <input type="number" name="number2" placeholder="Number2">
+  <input type="number" name="number3" placeholder="number3">
+  <input type="number" name="number4" placeholder="number4">
+  <button type="submit">Enter</button>
+</form>
+<p th:text="${result}"></p>
+</body>
+</html>

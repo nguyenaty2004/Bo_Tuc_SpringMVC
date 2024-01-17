@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th ="https://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h1> Tính Tổng 3 Số Cộng lại </h1>
+<form th:action="@{/SumThreeNumber/result}" method="get">
+    <input type="number" name="number1" placeholder="Number1">
+    <input type="number" name="number2" placeholder="Number2">
+    <input type="number" name="number3" placeholder="number3">
+    <button type="submit">Enter</button>
+
+</form>
+<a th:text="${result}"></a>
+</body>
+</html>
