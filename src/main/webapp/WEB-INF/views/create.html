@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Add User To list</h1>
+
+<form th:action="@{/index/create}" method="post"  th:object="${user}">
+    <input th:type="number" placeholder="ID..." th:field="*{id}">
+    <br>
+    <input th:type="text" placeholder="Name..." th:field="*{name}">
+    <br>
+    <input th:type="text" placeholder="Age..." th:field="*{age}">
+    <br>
+    <input th:type="text" placeholder="Address..." th:field="*{address}">
+    <br>
+    <input th:type="text" placeholder="Role..." th:field="*{role}">
+    <button type="submit"> Enter</button>
+</form>
+</body>
+</html>

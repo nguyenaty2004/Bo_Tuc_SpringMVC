@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h1>List User</h1>
+
+<button><a th:href="@{/index/add-user}">Create</a></button>
+
+<table border="1px solid black">
+    <tr>
+        <td>STT</td>
+        <td>Name</td>
+        <td>Age</td>
+        <td>Address</td>
+        <td>role</td>
+        <td>Edit</td>
+        <td>Delete</td>
+    </tr>
+    <tr th:each="item ,state :${userList}">
+        <td th:text="${state.count}"></td>
+        <td th:text="${item.name}"></td>
+        <td th:text="${item.age}"></td>
+        <td th:text="${item.address}"></td>
+        <td th:text="${item.role}"></td>
+        <td>
+            <a th:href="@{/index/{id}/update(id=${item.getId()})}">
+                <button> Edit</button>
+            </a>
+            <form th:action="@{'/index/delete/' + ${item.id}}" method ="post">
+                <button type="submit">delete</button>
+            </form>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
