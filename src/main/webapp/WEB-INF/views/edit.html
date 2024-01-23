@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h1>Edit Computer</h1>
+
+<form th:action="@{/computer/update}" method="post" th:object="${computer}">
+<input th:type="number" th:field="*{id}">
+<br>
+<input th:type="text" th:field="*{name}">
+<br>
+<input th:type="text" th:field="*{details}">
+<br>
+<input th:type="number" th:field="*{price}">
+<br>
+<input th:type="text" th:field="*{CPU}">
+<br>
+<input th:type="text" th:field="*{GUP}">
+<br>
+<input th:type="text" th:field="*{ram}">
+<br>
+<button type="submit"> edit</button>
+</form>
+</body>
+</html>
