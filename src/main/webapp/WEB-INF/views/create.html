@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> Add Computer</h1>
+<form th:action="@{/computers/create}" method="post" th:object="${computer}">
+    <input th:text="number" th:field="*{id}">
+    <br>
+    <input th:text="text" th:field="*{name}">
+    <br>
+    <input th:text="number" th:field="*{price}">
+    <br>
+    <button type="submit">add</button>
+</form>
+</body>
+</html>
